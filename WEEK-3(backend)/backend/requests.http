@@ -1,0 +1,34 @@
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "productId": 101,
+  "name": "car",
+  "price": 25000,
+  "brand": "suzuki"
+}
+
+###
+
+GET http://localhost:3000/products
+
+###
+
+GET http://localhost:3000/products-id/101
+
+###
+GET http://localhost:3000/products/brand/honda
+###
+PUT http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "productId": 101,
+  "name": "bike",
+  "price": 15000,
+  "brand": "honda"
+}
+
+###
+
+DELETE http://localhost:3000/products/101

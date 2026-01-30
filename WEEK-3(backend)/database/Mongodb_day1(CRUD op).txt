@@ -1,0 +1,175 @@
+========================================
+DAY 1 – MONGODB BASIC CRUD OPERATIONS
+========================================
+
+NOTE:
+CRUD stands for:
+C – Create
+R – Read
+U – Update
+D – Delete
+
+----------------------------------------
+DATABASE COMMANDS
+----------------------------------------
+
+1. use <database_name>
+   → Creates a new database (if it does not exist)
+   → Switches to the database
+
+   Example:
+   use collegeDB
+
+
+2. show databases
+   → Displays all available databases
+
+
+----------------------------------------
+COLLECTION COMMANDS
+----------------------------------------
+
+3. db.createCollection("collection_name")
+   → Creates a new collection inside the current database
+
+   Example:
+   db.createCollection("students")
+
+
+----------------------------------------
+CREATE (INSERT DOCUMENTS)
+----------------------------------------
+
+4. Insert ONE document
+
+   db.collection_name.insertOne({
+     name: "tan",
+     age: 19
+   })
+
+   Example:
+   db.students.insertOne({ name: "tan", age: 19 })
+
+
+5. Insert MULTIPLE documents
+
+   db.collection_name.insertMany([
+     { name: "ram", age: 20 },
+     { name: "sam", age: 21 }
+   ])
+
+
+----------------------------------------
+READ (FETCH DOCUMENTS)
+----------------------------------------
+
+6. Find ALL matching documents
+
+   db.collection_name.find({ condition })
+
+   Example:
+   db.students.find({ age: 19 })
+
+
+7. Find ONLY ONE matching document
+
+   db.collection_name.findOne({ condition })
+
+   Example:
+   db.students.findOne({ name: "tan" })
+
+
+----------------------------------------
+UPDATE (MODIFY DOCUMENTS)
+----------------------------------------
+
+8. Update ONE document
+
+   db.collection_name.updateOne(
+     { condition },
+     { $set: { field: value } }
+   )
+
+   Example:
+   db.students.updateOne(
+     { name: "tan" },
+     { $set: { age: 20 } }
+   )
+
+
+9. Update MULTIPLE documents
+
+   db.collection_name.updateMany(
+     { condition },
+     { $set: { field: value } }
+   )
+
+   Example:
+   db.students.updateMany(
+     { age: 19 },
+     { $set: { status: "active" } }
+   )
+
+
+----------------------------------------
+DELETE (REMOVE DOCUMENTS)
+----------------------------------------
+
+10. Delete ONE document
+
+    db.collection_name.deleteOne({ condition })
+
+    Example:
+    db.students.deleteOne({ name: "tan" })
+
+
+11. Delete MULTIPLE documents
+
+    db.collection_name.deleteMany({ condition })
+
+    Example:
+    db.students.deleteMany({ age: { $lt: 18 } })
+
+
+========================================
+QUERY OPERATORS IN MONGODB
+========================================
+
+Syntax:
+{ field : { operator : value } }
+
+
+----------------------------------------
+COMPARISON OPERATORS
+----------------------------------------
+
+$eq   → Equal to
+$ne   → Not equal to
+$gt   → Greater than
+$gte  → Greater than or equal to
+$lt   → Less than
+$lte  → Less than or equal to
+$in   → Matches any value in array
+$nin  → Not in array
+
+
+----------------------------------------
+QUERY EXAMPLES
+----------------------------------------
+
+1. Find users with age greater than 18
+
+   db.students.find({ age: { $gt: 18 } })
+
+
+2. Find users with age less than or equal to 20
+
+   db.students.find({ age: { $lte: 20 } })
+
+
+3. Find users whose age is 18 or 21
+
+   db.students.find({ age: { $in: [18, 21] } })
+
+
+ 

@@ -1,0 +1,62 @@
+GET  http://127.0.0.1:3000/user-api/users
+
+###
+POST  http://127.0.0.1:3000/user-api/user
+Content-Type: application/json
+
+{
+  "id":4,
+  "name":"tan"
+}
+
+###
+PUT http://127.0.0.1:3000/user-api/users
+Content-Type: application/json
+
+{
+    "id":4,
+  "name":"elsa"
+}
+
+###
+GET http://127.0.0.1:3000/user-api/users/4
+
+###
+DELETE http://127.0.0.1:3000/user-api/users/4
+
+###
+POST http://localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+  "productId": 101,
+  "name": "car",
+  "price": 25000,
+  "brand": "suzuki"
+}
+
+###
+
+GET http://localhost:3000/product-api/products
+
+###
+
+GET http://localhost:3000/product-api/products-id/101
+###
+GET http://localhost:3000/product-api/products/brand/honda
+###
+PUT http://localhost:3000/product-localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+  "productId": 101,
+  "name": "bike",
+  "price": 15000,
+  "brand": "honda"
+}
+
+###
+
+DELETE http://localhost:3000/product-api/products/101
+
+
