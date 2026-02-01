@@ -1,0 +1,57 @@
+###read all users
+GET http://localhost:4000/user-api/users
+
+###read user by object id
+GET http://localhost:4000/user-api/users/697dbc77d32dd1f9d98d85a4
+
+###create user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name":"tanmai",
+    "password":"123456789",
+    "age":20
+}
+
+###update user by id
+PUT http://localhost:4000/user-api/users/697dbc77d32dd1f9d98d85a4
+Content-Type: application/json
+
+{
+    "name":"tanmai",    
+    "password":"987654321",
+    "age":20
+}
+
+###delete user by id
+DELETE http://localhost:4000/user-api/users/697dbc77d32dd1f9d98d85a4
+
+
+###read products
+GET http://localhost:4000/product-api/products
+
+###create product
+
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productName":"Laptop",
+    "id":"P12345",
+    "price":75000
+}
+
+###read product by object id
+GET http://localhost:4000/product-api/products/697f20e016334b4b993ebb78
+
+
+###create product by id
+POST http://localhost:4000/product-api/products/697f20e016334b4b993ebb78
+Content-Type: application/json
+
+{
+    "productName":"Smartphone",
+    "id":"P67890",
+    "price":30000
+}
