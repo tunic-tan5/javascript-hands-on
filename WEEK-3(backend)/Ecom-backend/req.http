@@ -1,0 +1,56 @@
+ 
+
+###
+
+GET http://localhost:4000/product-api/products
+
+###
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productName":"tv",
+    "price":75000,
+    "brand":"LG"
+}
+
+###
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productName":"fridge",
+    "price":50000,
+    "brand":"sony"
+}
+
+###
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productName":"washing machine",
+    "price":25000,
+    "brand":"samsung"
+}
+
+###
+GET http://localhost:4000/user-api/users
+
+###
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name":"tan",
+    "email":"tan@gmail.com",
+    "password":"tan1504",
+    "cart":[]
+}
+###find user by id 
+GET http://localhost:4000/user-api/users/698185fe2f777f43f6ff96e1
+###req to add product to cart
+PUT http://localhost:4000/user-api/user-cart/user-id/69818daee03eda16d9bf941e/product-id/69817c73b652f00c293a4668
+
+###qty update
+PUT http://localhost:4000/user-api/user-cart-quantity/user-id/69818daee03eda16d9bf941e/product-id/69817d32b652f00c293a466d

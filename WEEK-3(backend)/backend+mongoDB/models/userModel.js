@@ -7,6 +7,11 @@ const userSchema = new Schema({
         minLength: [4, "Name must be at least 4 characters long"],
         maxLength: [6, "Name can be at most 6 characters long"]
     },
+    email:{
+        type: String,
+        required: [true, "Email is required"],
+        unique: true //add to index
+    },
     password:{
         type: String,
         required: [true, "Password is required"],

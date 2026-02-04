@@ -1,5 +1,5 @@
 {
-  "name": "backend_demo2",
+  "name": "ecom",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,10 +12,8 @@
   "type": "module",
   "dependencies": {
     "bcryptjs": "^3.0.3",
-    "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.1.5",
-    "nodemon": "^3.1.11"
+    "mongoose": "^9.1.5"
   }
 }
